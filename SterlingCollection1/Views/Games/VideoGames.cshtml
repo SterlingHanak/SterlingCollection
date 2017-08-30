@@ -1,0 +1,33 @@
+﻿@using SterlingCollection1.Models;
+@model List<Game>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>VideoGames</h2>
+
+<div class="col-md-3 filter-container sidenav" id="mySidenav">
+    <span id="closeCatBtn" class="closebtn" style="cursor: pointer;">X</span>
+    <h2>Filter</h2>
+    <hr />
+    <h2>By Console:</h2>
+</div>
+
+<div class="row game-list">
+    @foreach (Game videoGame in Model)
+    {
+        <div class="col-md-4 game-detail">
+            <div class="game-container">
+                <h2>@videoGame.Name</h2>
+                <img class="img-fluid game-img" src=@("~/Content/Games/" + videoGame.CoverArt) />
+            </div>
+            <div class="overlay">
+                <p>@videoGame.Name</p>
+                <p>@videoGame.Console</p>
+                <p>@videoGame.Publisher</p>
+                <p>@videoGame.ReleaseYear</p>
+            </div>
+        </div>
+    }
+</div>

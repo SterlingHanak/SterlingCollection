@@ -1,0 +1,83 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url('Backgrounds/dark-metal-texture.jpg');
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/*HOME PAGE*/
+.jumbotron {
+    text-align: center;
+    background-image: url('Backgrounds/stainless-steel.jpg');
+}
+
+.home-info {
+    background-image: url('Backgrounds/stainless-steel.jpg');
+    height: 300px;
+    text-align: center;
+    border: solid;
+    border-color: black;
+}
+
+
+/*VIDEO GAMES PAGE*/
+.game-detail {
+    height: 350px;
+    text-align: center;
+    background-image: url('Backgrounds/stainless-steel.jpg');
+    border: solid;
+    border-color: black;
+}
+
+.game-container {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.game-img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 88%;
+    width: 100%;
+    margin: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    overflow: auto;
+}
+
+game-container:hover .overlay{
+    opacity: 1;
+}
