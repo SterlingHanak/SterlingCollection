@@ -10,5 +10,6 @@ namespace SterlingCollection1.DAL
     public interface IGameDAL
     {
         List<Game> GetAllGames();
+        List<Game> GetGamesByConsole(string consoleName);
     }
 }

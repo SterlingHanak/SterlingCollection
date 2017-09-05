@@ -65,6 +65,7 @@ namespace SterlingCollection1.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IGameDAL>().To<GameSqlDAL>().WithConstructorArgument("connectionString", ConfigurationManager.ConnectionStrings["SterlingCollectionDB"].ConnectionString);
-        }        
+            kernel.Bind<IAlbumDAL>().To<AlbumSqlDAL>().WithConstructorArgument("connectionString", ConfigurationManager.ConnectionStrings["SterlingCollectionDB"].ConnectionString);
+        }
     }
 }

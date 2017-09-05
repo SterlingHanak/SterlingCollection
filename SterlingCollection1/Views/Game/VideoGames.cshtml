@@ -1,0 +1,59 @@
+﻿@using SterlingCollection1.Models;
+@model List<Game>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Games</h2>
+
+<div>
+    <span id="openCatBtn">Filter Options</span>
+</div>
+
+<div class="col-md-3 filter-container sidenav" id="mySidenav">
+    <span id="closeCatBtn" class="closebtn" style="cursor: pointer;">X</span>
+    <h2>Filter</h2>
+    <hr />
+    <h2>By Console:</h2>
+    <div class="checkboxContainer" style="padding-right: 5px; margin-left: -10px;">
+        <p id="NES" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("NES", true) Nintendo Entertainment System</p>
+        <p id="SNES" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("SNES", true) Super Nintendo Entertainment System</p>
+        <p id="Genesis" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("Genesis", true) Sega Genesis</p>
+        <p id="GameBoy" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("GameBoy", true) GameBoy</p>
+        <p id="N64" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("N64", true) Nintendo 64</p>
+        <p id="PS1" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("PS1", true) Playstation</p>
+        <p id="GBA" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("GBA", true) GameBoy Advance</p>
+        <p id="PS2" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("PS2", true) Playstation 2</p>
+        <p id="GameCube" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("GameCube", true) Nintendo GameCube</p>
+        <p id="Xbox" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("Xbox", true) Microsoft Xbox</p>
+        <p id="Dreamcast" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("Dreamcast", true) Sega Dreamcast</p>
+        <p id="Wii" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("Wii", true) Nintendo Wii</p>
+        <p id="DS" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("DS", true) Nintendo DS</p>
+        <p id="PS3" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("PS3", true) Playstation 3</p>
+        <p id="360" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("360", true) Xbox 360</p>
+        <p id="3DS" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("3DS", true) Nintendo 3DS</p>
+        <p id="Vita" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("Vita", true) Playstation Vita</p>
+        <p id="WiiU" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("WiiU", true) Wii U</p>
+        <p id="PS4" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("PS4", true) Playstation 4</p>
+        <p id="XBOne" class="checkbox_rating checkbox-inline" style="margin-left: 10px; padding-bottom: 20px;">@Html.CheckBox("XBOne", true) Xbox One</p>
+    </div>
+</div>
+
+<div class="row game-list">
+    @foreach (Game videoGame in Model)
+    {
+        <div class="col-md-4 game-detail @videoGame.Console">
+            <div class="game-container">
+                <h2>@videoGame.Name</h2>
+                <img class="img-fluid game-img" src=@("../Content/Games/" + videoGame.CoverArt) />
+            </div>
+            <div class="overlay">
+                <p>@videoGame.Name</p>
+                <p>@videoGame.Console</p>
+                <p>@videoGame.Publisher</p>
+                <p>@videoGame.ReleaseYear</p>
+            </div>
+        </div>
+    }
+</div>

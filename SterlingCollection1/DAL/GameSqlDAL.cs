@@ -42,6 +42,31 @@ namespace SterlingCollection1.DAL
             }
         }
 
+        public List<Game> GetGamesByConsole(string consoleName)
+        {
+            List<Game> games = new List<Game>();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(SQL_GetGamesByConsole, conn);
+                    cmd.Parameters.AddWithValue("@console", consoleName);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        games.Add(PopulateGameObject(reader));
+                    }
+                }
+                return games;
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+        }
+
+
         private Game PopulateGameObject(SqlDataReader reader)
         {
             Game game = new Game();

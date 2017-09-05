@@ -39,10 +39,48 @@ textarea {
     border-color: black;
 }
 
+/*Game Category Page*/
+.category-jumbo {
+    text-align: center;
+    background-image: url('Backgrounds/stainless-steel.jpg');
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.category-detail {
+    background-image: url('Backgrounds/stainless-steel.jpg');
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.category-head {
+    background-color: gold;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.console-frame {
+    border-style: inset;
+    border-width: 10px;
+    border-color: darkgoldenrod;
+    height: 300px;
+}
+
+.console-name {
+    background-color: gold;
+    font-size: 25px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
 
 /*VIDEO GAMES PAGE*/
 .game-detail {
-    height: 350px;
+    height: 500px;
     text-align: center;
     background-image: url('Backgrounds/stainless-steel.jpg');
     border: solid;
@@ -60,7 +98,7 @@ textarea {
     left: 0;
     bottom: 0;
     right: 0;
-    height: 88%;
+    height: 100%;
     width: 100%;
     margin: auto;
 }
@@ -75,9 +113,57 @@ textarea {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
+    background-image: url('Backgrounds/stainless-steel.jpg');
     overflow: auto;
 }
 
-game-container:hover .overlay{
+game-detail:hover .overlay{
     opacity: 1;
+}
+
+/*Filter SideNav*/
+#openCatBtn {
+    cursor: pointer;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -30px;
+    background-color: rgba(17, 17, 17, 0.92);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+    text-align: right;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*Vinyl Records View*/
+.album-detail {
+    height: 500px;
+    text-align: center;
+    background-image: url('Backgrounds/stainless-steel.jpg');
+    border: solid;
+    border-color: black;
+}
+
+.album-img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
 }

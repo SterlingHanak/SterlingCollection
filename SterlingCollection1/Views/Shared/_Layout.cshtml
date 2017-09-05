@@ -9,6 +9,7 @@
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js" defer></script>
     <script src="~/Scripts/jquery-ui-1.12.1.min.js" defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
+    <script src="~/Scripts/VideoGames.js" defer></script>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
 </head>
@@ -20,7 +21,9 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li class="dropdown">
+                <li>@Html.ActionLink("Gaming", "GameCategory", "Game")</li>
+                <li>@Html.ActionLink("Music", "VinylRecords", "Album")</li>
+                @*<li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">The Collection
                     <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -28,7 +31,7 @@
                         <li><a href="#">Music</a></li>
                         <li><a href="#">Movies</a></li>
                     </ul>
-                </li>
+                </li>*@
             </ul>
         </div>
     </div>

@@ -1,0 +1,31 @@
+﻿@using SterlingCollection1.Models;
+@model List<Album>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="category-jumbo">
+    <h1>The Music of the Sterling Collection</h1>
+    <p class="lead">The Sterling Collection contains tons of music, including hundreds of CDs and vinyl records.</p>
+    <p class="lead">Hover over an album to view its details such as its artist, genre, year of release, and even what color vinyl it was pressed on!</p>
+</div>
+
+<div class="row album-list">
+    @foreach (Album record in Model)
+    {
+        <div class="col-md-4 album-detail">
+            <div class="album-container">
+                <img class="img-fluid album-img" src=@("../Content/Albums/" + record.AlbumArt) />
+            </div>
+            <h2>@record.AlbumName</h2>
+            <div class="overlay">
+                <p>Artist: @record.Artist</p>
+                <p>Country of Origin: @record.Country</p>
+                <p>Released in @record.ReleaseYear by @record.Label</p>
+                <p>Genre: @record.Genre</p>
+                <p>Color: @record.FormatDetail</p>
+            </div>
+        </div>
+    }
+</div>

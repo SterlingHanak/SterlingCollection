@@ -1,4 +1,5 @@
-﻿
+﻿--VIDEO GAMES
+
 --NES GAMES
 INSERT INTO games VALUES ('The Legend of Zelda', 'NES', 'Nintendo', 1987, 'ZeldaNES.jpg');
 INSERT INTO games VALUES ('Ninja Gaiden', 'NES', 'Tecmo', 1988, 'NinjaGaiden.jpg');
@@ -437,3 +438,52 @@ INSERT INTO games VALUES ('Batman: Arkham Knight', 'XBOne', 'Rocksteady Studios'
 INSERT INTO games VALUES ('Halo 5: Guardians', 'XBOne', '343 Industries', 2015, 'Halo5.jpg');
 INSERT INTO games VALUES ('Far Cry Primal', 'XBOne', 'Ubisoft', 2016, 'FarCryPrimal.jpg');
 INSERT INTO games VALUES ('Doom', 'XBOne', 'Bethesda Softworks', 2016, 'DoomOne.jpg');
+
+
+--MUSIC
+
+--VINYL
+INSERT INTO albums VALUES ('The Forest Seasons', 'Wintersun', 'Finland', 'Nuclear Blast Records', 'Folk Metal', 2017, 'Vinyl', 'Swamp/Mint Splatter', 'ForestSeasons.jpg');
+INSERT INTO albums VALUES ('Evocation II - Pantheon', 'Eluveitie', 'Switzerland', 'Nuclear Blast Records', 'Folk Metal', 2017, 'Vinyl', 'Clear', 'EvocationII.jpg')
+INSERT INTO albums VALUES ('Magnificent Glorification of Lucifer', 'Inquisition', 'Colombia', 'No Colours Records', 'Black Metal', 2004, 'Vinyl', 'Brown, Cowhide Edition', 'Glorification.jpg');
+INSERT INTO albums VALUES ('Filosofem', 'Burzum', 'Norway', 'Misanthropy Records', 'Black Metal', 1996, 'Vinyl', 'Black', 'Filosofem.jpg');
+INSERT INTO albums VALUES ('Heaven Shall Burn... When We Are Gathered', 'Marduk', 'Sweden', 'Osmose Productions', 'Black Metal', 1996, 'Vinyl', 'Black', 'HeavenShallBurn.jpg');
+INSERT INTO albums VALUES ('The Secrets of the Black Arts', 'Dark Funeral', 'Sweden', 'No Fashion Records', 'Black Metal', 1996, 'Vinyl', 'Black', 'BlackArts.jpg');
+INSERT INTO albums VALUES ('Savior Sorrow', 'Mushroomhead', 'United States', 'Megaforce Records', 'Alternative Metal', 2006, 'Vinyl', 'Silver', 'SaviorSorrow.jpg');
+INSERT INTO albums VALUES ('Days of Purgatory', 'Iced Earth', 'United States', 'Century Media Records', 'Heavy Metal', 1997, 'Vinyl', 'Black', 'DaysOfPurgatory.jpg');
+INSERT INTO albums VALUES ('Burnt Offerings', 'Iced Earth', 'United States', 'Century Media Records', 'Heavy Metal', 1995, 'Vinyl', 'Black', 'BurntOfferings.jpg');
+INSERT INTO albums VALUES ('Runaljod - Ragnarok', 'Wardruna', 'Norway', 'Norse Music', 'Nordic Folk', 2016, 'Vinyl', 'Gold', 'RunaljodRagnarok.jpg');
+INSERT INTO albums VALUES ('Serpents Unleashed', 'Skeletonwitch', 'United States', 'Prosthetic Records', 'Extreme Metal', 2013, 'Vinyl', 'Black', 'SerpentsUnleashed.jpg');
+INSERT INTO albums VALUES ('Jumalten aika', 'Moonsorrow', 'Finland', 'Century Media Records', 'Pagan Metal', 2016, 'Vinyl', 'Clear', 'JumaltenAika.jpg');
+INSERT INTO albums VALUES ('Bad Magic', 'Motörhead', 'United Kingdom', 'UDR', 'Rock', 2015, 'Vinyl', 'White', 'BadMagic.jpg');
+INSERT INTO albums VALUES ('Banjo-Kazooie Soundtrack', 'Banjo-Kazooie (Composer: Grant Kirkhope)', 'United Kingdom', 'iam8bit', 'Soundtrack', 2016, 'Vinyl', 'Brown/Red', 'BanjoKazooieVinyl.jpg');
+INSERT INTO albums VALUES ('Nordland I', 'Bathory', 'Sweden', 'Black Mark Production', 'Extreme Metal', 2002, 'Vinyl', 'Picture Disc', 'NordlandI.jpg');
+INSERT INTO albums VALUES ('Nordland II', 'Bathory', 'Sweden', 'Black Mark Production', 'Extreme Metal', 2003, 'Vinyl', 'Picture Disc', 'NordlandII.jpg');
+INSERT INTO albums VALUES ('Vögguvísur Yggdrasils', 'Skálmöld', 'Iceland', 'Napalm Records', 'Folk Metal', 2016, 'Vinyl', 'Red', 'Skalmold.jpg');
+INSERT INTO albums VALUES ('Drink - Kvadning', 'SkálStorm', 'Iceland/Scotland', 'Napalm Records', 'Folk Metal', 2016, 'Vinyl', 'Red', 'SkalStorm.jpg');
+INSERT INTO albums VALUES ('Silence in the Snow', 'Trivium', 'United States', 'Roadrunner Records', 'Heavy Metal', 2015, 'Vinyl', 'White', 'SilenceSnow.jpg');
+INSERT INTO albums VALUES ('The Whole of the Law', 'Anaal Nathrakh', 'United Kingdom', 'Metal Blade Records', 'Extreme Metal', 2016, 'Vinyl', 'Black', 'WholeLaw.jpg');
+INSERT INTO albums VALUES ('Meteora', 'Linkin Park', 'United States', 'Warner Bros. Records', 'Rock', 2003, 'Vinyl', 'Black', 'Meteora.jpg');
+INSERT INTO albums VALUES ('Suden uni', 'Moonsorrow', 'Finland', 'Plasmatica Records', 'Pagan Metal', 2001, 'Vinyl', 'Black', 'SudenUni.jpg');
+INSERT INTO albums VALUES ('Plagues of Babylon', 'Iced Earth', 'United States', 'Century Media Records', 'Heavy Metal', 2014, 'Vinyl', 'Black', 'PlaguesOfBabylon.jpg');
+INSERT INTO albums VALUES ('Energy', 'Operation Ivy', 'United States', 'Lookout Records', 'Punk', 1989, 'Vinyl', 'Black', 'OperationIvy.jpg');
+INSERT INTO albums VALUES ('Noita', 'Korpiklaani', 'Finland', 'Nuclear Blast Records', 'Folk Metal', 2015, 'Vinyl', 'Blue', 'Noita.jpg');
+INSERT INTO albums VALUES ('Game of Thrones: Season 1 Soundtrack', 'Game of Thrones (Composer: Ramin Djawadi)', 'United Kingdom', 'Varèse Sarabande', 'Soundtrack', 2011, 'Vinyl', 'Black', 'GoTVinyl.jpg');
+INSERT INTO albums VALUES ('Constricting Rage of the Merciless', 'Goatwhore', 'United States', 'Metal Blade Records', 'Blackened Death Metal', 2014, 'Vinyl', 'Black', 'ConstrictingRage.jpg');
+INSERT INTO albums VALUES ('Beyond the Red Mirror', 'Blind Guardian', 'Germany', 'Nuclear Blast Records', 'Power Metal', 2015, 'Vinyl', 'Picture Disc', 'RedMirror.jpg');
+INSERT INTO albums VALUES ('The Mantle', 'Agalloch', 'United States', 'The End Records', 'Black Metal', 2002, 'Vinyl', 'Black', 'TheMantle.jpg');
+INSERT INTO albums VALUES ('Ashes Against the Grain', 'Agalloch', 'United States', 'The End Records', 'Black Metal', 2006, 'Vinyl', 'Black', 'AshesAgainstTheGrain.jpg');
+INSERT INTO albums VALUES ('The Quantum Enigma', 'Epica', 'The Netherlands', 'Nuclear Blast Records', 'Symphonic Metal', 2014, 'Vinyl', 'Clear', 'QuantumEnigma.jpg');
+INSERT INTO albums VALUES ('Sons of Northern Darkness', 'Immortal', 'Norway', 'Nuclear Blast Records', 'Black Metal', 2002, 'Vinyl', 'Black/White Splatter', 'NorthernDarkness.jpg');
+INSERT INTO albums VALUES ('Fighting the World', 'Manowar', 'United States', 'Atco Records', 'Heavy Metal', 1987, 'Vinyl', 'Black', 'FightingTheWorld.jpg');
+INSERT INTO albums VALUES ('Surgical Steel', 'Carcass', 'United Kingdom', 'Nuclear Blast Records', 'Death Metal', 2013, 'Vinyl', 'Electric Blue', 'SurgicalSteel.jpg');
+INSERT INTO albums VALUES ('Hammer of the Witches', 'Cradle of Filth', 'United Kingdom', 'Nuclear Blast Records', 'Extreme Metal', 2015, 'Vinyl', 'Dark Green', 'HammerOfTheWitches.jpg');
+INSERT INTO albums VALUES ('I Worship Chaos', 'Children of Bodom', 'Finland', 'Nuclear Blast Records', 'Melodic Death Metal', 2015, 'Vinyl', 'Clear', 'IWorshipChaos.jpg');
+INSERT INTO albums VALUES ('One Man Army', 'Ensiferum', 'Finland', 'Metal Blade Records', 'Folk Metal', 2015, 'Vinyl', 'Black', 'OneManArmy.jpg');
+INSERT INTO albums VALUES ('Terror Regime', 'Jungle Rot', 'United States', 'Victory Records', 'Death Metal', 2013, 'Vinyl', 'Blue', 'TerrorRegime.jpg');
+INSERT INTO albums VALUES ('Trilogy', 'Yngwie Malmsteen', 'Sweden', 'Polydor Records', 'Heavy Metal', 1986, 'Vinyl', 'Black', 'YngwieTrilogy.jpg');
+INSERT INTO albums VALUES ('Razorblade Romance', 'HIM', 'Finland', 'BMG', 'Gothic Rock', 1999, 'Vinyl', 'Pink', 'RazorbladeRomance.jpg');
+INSERT INTO albums VALUES ('Deep Shadows and Brilliant Highlights', 'HIM', 'Finland', 'BMG', 'Gothic Rock', 2001, 'Vinyl', 'Silver', 'DeepShadows.jpg');
+INSERT INTO albums VALUES ('The Way of All Flesh', 'Gojira', 'France', 'Listenable Records', 'Progressive Metal', 2008, 'Vinyl', 'Clear', 'WayOfAllFlesh.jpg');
+INSERT INTO albums VALUES ('Cryptoriana - The Seductiveness of Decay', 'Cradle of Filth', 'United Kingdom', 'Nuclear Blast Records', 'Extreme Metal', 2017, 'Vinyl', 'Clear/Red Splatter', 'Cryptoriana.jpg');
+INSERT INTO albums VALUES ('Two Paths', 'Ensiferum', 'Finland', 'Metal Blade Records', 'Folk Metal', 2017, 'Vinyl', 'Forest Green', 'TwoPaths.jpg');

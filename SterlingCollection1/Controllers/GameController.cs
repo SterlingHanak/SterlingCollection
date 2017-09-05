@@ -8,19 +8,26 @@ using SterlingCollection1.DAL;
 
 namespace SterlingCollection1.Controllers
 {
-    public class Games : Controller
+    public class GameController : Controller
     {
 
         private IGameDAL gameDAL;
-        public Games(IGameDAL gameDAL)
+
+        public GameController(IGameDAL gameDAL)
         {
             this.gameDAL = gameDAL;
         }
 
-        // GET: VideoGames
-        public ActionResult VideoGames()
+        //GET: GameCategory
+        public ActionResult GameCategory()
         {
-            List<Game> videoGames = gameDAL.GetAllGames();
+            return View("GameCategory");
+        }
+
+        // GET: VideoGames
+        public ActionResult VideoGames(string consoleName)
+        {
+            List<Game> videoGames = gameDAL.GetGamesByConsole(consoleName);
             return View("VideoGames", videoGames);
         }
     }

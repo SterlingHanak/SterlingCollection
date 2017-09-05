@@ -13,6 +13,8 @@ CREATE TABLE albums (
 	id integer IDENTITY NOT NULL,
 	album_name varchar(100) NOT NULL,
 	artist varchar(100) NOT NULL,
+	country varchar(100) NOT NULL,
+	label varchar(100) NOT NULL,
 	genre varchar(100) NOT NULL,
 	release_year integer NOT NULL,
 	album_format varchar(100) NOT NULL,
