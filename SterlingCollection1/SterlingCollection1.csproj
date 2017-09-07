@@ -213,9 +213,15 @@
     <Content Include="Content\Albums\WayOfAllFlesh.jpg" />
     <Content Include="Content\Albums\WholeLaw.jpg" />
     <Content Include="Content\Albums\YngwieTrilogy.jpg" />
+    <Content Include="Content\Backgrounds\Concrete.jpg" />
+    <Content Include="Content\Backgrounds\Concrete2.jpg" />
     <Content Include="Content\Backgrounds\dark-background.jpg" />
     <Content Include="Content\Backgrounds\dark-metal-texture.jpg" />
     <Content Include="Content\Backgrounds\dark-pattern.jpg" />
+    <Content Include="Content\Backgrounds\gold.jpg" />
+    <Content Include="Content\Backgrounds\heavy-metal.gif" />
+    <Content Include="Content\Backgrounds\marble1.jpg" />
+    <Content Include="Content\Backgrounds\MetroidFusion.gif" />
     <Content Include="Content\Backgrounds\stainless-steel.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -637,6 +643,7 @@
     <Content Include="Content\Games\YoshiIsland.jpg" />
     <Content Include="Content\Games\ZeldaNES.jpg" />
     <Content Include="Content\Games\ZombiesAteMyNeighbors.jpg" />
+    <Content Include="Content\Other\DestinyVideo.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

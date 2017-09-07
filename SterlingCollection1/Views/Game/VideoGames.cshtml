@@ -43,10 +43,21 @@
 <div class="row game-list">
     @foreach (Game videoGame in Model)
     {
+        string picHeight = "100%";
+        string picWidth = "100%";
+
+        if (videoGame.Console == "N64" || videoGame.Console == "SNES") { picHeight = "80%"; }
+        else if (videoGame.Console == "Dreamcast" || videoGame.Console == "PS1" || videoGame.Console == "GBA" || videoGame.Console == "GameBoy"
+        || videoGame.Console == "DS" || videoGame.Console == "3DS")
+        {
+            picWidth = "90%";
+        }
+        else { picWidth = "70%"; }
+
         <div class="col-md-4 game-detail @videoGame.Console">
-            <div class="game-container">
+            <div class="game-container">1
                 <h2>@videoGame.Name</h2>
-                <img class="img-fluid game-img" src=@("../Content/Games/" + videoGame.CoverArt) />
+                <img class="img-fluid game-img" style="height: @picHeight; width: @picWidth;" src=@("../Content/Games/" + videoGame.CoverArt) />
             </div>
             <div class="overlay">
                 <p>@videoGame.Name</p>
