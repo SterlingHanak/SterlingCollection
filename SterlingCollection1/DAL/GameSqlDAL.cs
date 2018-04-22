@@ -13,6 +13,7 @@ namespace SterlingCollection1.DAL
 
         const string SQL_GetAllGames = "SELECT * FROM games ORDER BY name;";
         const string SQL_GetGamesByConsole = "SELECT * FROM games WHERE console = @console ORDER BY name;";
+        const string SQL_GetGameInfo = "SELECT * FROM games WHERE id = @id";
 
         public GameSqlDAL(string connectionString)
         {
@@ -59,6 +60,30 @@ namespace SterlingCollection1.DAL
                     }
                 }
                 return games;
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+        }
+
+        public Game GetGameInfo(int gameTag)
+        {
+            Game videoGame = new Game();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(SQL_GetGameInfo, conn);
+                    cmd.Parameters.AddWithValue("@id", gameTag);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        videoGame = PopulateGameObject(reader);
+                    }
+                }
+                return videoGame;
             }
             catch (SqlException)
             {

@@ -1,0 +1,27 @@
+﻿@using SterlingCollection1.Models;
+@model Album
+
+@{
+    ViewBag.Title = "Album";
+}
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="game-info">
+                    <img class="album-cover" src=@("../Content/Albums/" + Model.AlbumArt) />
+                    <h3>@Model.AlbumName</h3>
+                    <h3>@Model.Artist</h3>
+                    <h3>@Model.Genre</h3>
+                    <h3>@Model.ReleaseYear</h3>
+                    <h3>@Model.Label</h3>
+                    <h3>@Model.Country</h3>
+                    <h3>@Model.AlbumFormat</h3>
+                    <h3>@Model.FormatDetail</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

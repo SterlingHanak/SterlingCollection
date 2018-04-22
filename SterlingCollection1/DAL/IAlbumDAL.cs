@@ -10,5 +10,6 @@ namespace SterlingCollection1.DAL
     public interface IAlbumDAL
     {
         List<Album> GetAllAlbums();
+        Album GetAlbumInfo(int recordTag);
     }
 }

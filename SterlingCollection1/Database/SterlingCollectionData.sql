@@ -429,6 +429,7 @@ INSERT INTO games VALUES ('The Elder Scrolls Online: Tamriel Unlimited', 'PS4', 
 INSERT INTO games VALUES ('Far Cry 4', 'PS4', 'Ubisoft', 2014, 'FarCry4.jpg');
 INSERT INTO games VALUES ('Dragon Age: Inquisition', 'PS4', 'Electronic Arts', 2014, 'Inquisition.jpg');
 INSERT INTO games VALUES ('Assassin''s Creed Unity', 'PS4', 'Ubisoft', 2014, 'Unity.jpg');
+INSERT INTO games VALUES ('Destiny 2', 'PS4', 'Bungie', 2017, 'Destiny2.jpg');
 
 --XBOX ONE GAMES
 INSERT INTO games VALUES ('Dishonored 2', 'XBOne', 'Bethesda Softworks', 2016, 'Dishonored2.jpg');
@@ -487,3 +488,9 @@ INSERT INTO albums VALUES ('Deep Shadows and Brilliant Highlights', 'HIM', 'Finl
 INSERT INTO albums VALUES ('The Way of All Flesh', 'Gojira', 'France', 'Listenable Records', 'Progressive Metal', 2008, 'Vinyl', 'Clear', 'WayOfAllFlesh.jpg');
 INSERT INTO albums VALUES ('Cryptoriana - The Seductiveness of Decay', 'Cradle of Filth', 'United Kingdom', 'Nuclear Blast Records', 'Extreme Metal', 2017, 'Vinyl', 'Clear/Red Splatter', 'Cryptoriana.jpg');
 INSERT INTO albums VALUES ('Two Paths', 'Ensiferum', 'Finland', 'Metal Blade Records', 'Folk Metal', 2017, 'Vinyl', 'Forest Green', 'TwoPaths.jpg');
+INSERT INTO albums VALUES ('Ensiferum', 'Ensiferum', 'Finland', 'Spinefarm', 'Folk Metal', 2001, 'Vinyl', 'Black', 'Ensiferum.jpg');
+INSERT INTO albums VALUES ('Iron', 'Ensiferum', 'Finland', 'Spinefarm', 'Folk Metal', 2004, 'Vinyl', 'Blue', 'Iron.jpg');
+INSERT INTO albums VALUES ('Dangerous Days', 'Pertubator', 'France', 'Blood Music', 'Dark Synth Wave', 2014, 'Vinyl', 'Black', 'DangerousDays.jpg');
+INSERT INTO albums VALUES ('Hugsjá', 'Ivar Bjørnson & Einar Selvik', 'Norway', 'Norse Music', 'Scandinavian Folk', 2018, 'Vinyl', 'Blue', 'Hugsja.jpg');
+INSERT INTO albums VALUES ('For All Tid', 'Dimmu Borgir', 'Norway', 'Nuclear Blast', 'Black Metal', 1994, 'Vinyl', 'White', 'ForAllTid.jpg');
+ 

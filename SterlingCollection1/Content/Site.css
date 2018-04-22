@@ -1,7 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url('Backgrounds/dark-metal-texture.jpg');
+    font-family: 'Share Tech Mono', monospace;
+    background-image:url(Backgrounds/dark-background.jpg); background-size:cover; background-attachment:fixed; background-repeat:no-repeat;}
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -26,162 +27,61 @@ textarea {
 
 
 /*HOME PAGE*/
-.jumbotron {
-    text-align: center;
-    background-image: url('Backgrounds/stainless-steel.jpg');
-}
-
-.home-info {
-    /*background-image: url('Backgrounds/stainless-steel.jpg');*/
-    background-image: url('Backgrounds/Concrete.jpg');
-    height: 450px;
-    text-align: center;
-    border: solid;
-    border-color: black;
-}
-
-.home-info > h2 {
-    background-image: url('Backgrounds/gold.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
-.home-info > img {
-    border-style: inset;
-    border-color: darkgoldenrod;
-    border-width: 10px;
-}
+.home-background{background-image: url('Backgrounds/Cyberpunk.jpg'); background-size:cover; background-repeat:no-repeat; background-attachment:fixed; min-height:100vh;}
+.home-main{background:rgba(25,25,112,0.6); height:50vh;}
+.home-container>h1{font-size:75px; font-weight:700; color:#fff; text-align:center;}
+.home-container>p{font-size:32px; color:#fff; text-align:center;}
 
 /*Game Category Page*/
-.category-jumbo {
-    text-align: center;
-    background-image: url('Backgrounds/stainless-steel.jpg');
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.category-detail {
-    background-image: url('Backgrounds/Concrete.jpg');
-    background-size: 150%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.category-head {
-    background-image: url('Backgrounds/gold.jpg');
-    background-size: 120%;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 50px;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.console-frame {
-    border-style: inset;
-    border-width: 10px;
-    border-color: darkgoldenrod;
-    height: 300px;
-}
-
-.console-name {
-    background-image: url('Backgrounds/gold.jpg');
-    background-size: 150%;
-    font-size: 25px;
-    border-radius: 10px;
-    text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
-}
+.list-background{background-image: url('Backgrounds/Cyberpunk.jpg'); background-size:cover; background-repeat:no-repeat; background-attachment:fixed; min-height:100vh;}
+.all-games-list, .search-form { background: rgba(5,0,58,0.7); /*border:solid 3px #a8a643; margin-top:20px;*/}
+.all-games-list>h1{font-size:75px; font-weight:700; color:#fff; text-align:center; color:cyan; font-family: 'Share Tech Mono', monospace;}
+.all-games-list>a>h2, .suggestions>li{font-size:28px; line-height:1.0 ; color:#fff; text-align:left; margin-left:10%; padding-top:2px; padding-bottom:2px; font-family: 'Share Tech Mono', monospace;}
+.all-games-list>a:hover{text-decoration:none;}
+.all-games-list>a>h2:hover{background-color:cyan; margin-left:0; padding-left:10%; text-decoration-line:none; color:#000; padding-top:2px; padding-bottom:2px;}
+.preview-image{display:none; float:right; max-height:350px; background:#fff}
+.search-form{margin-top:20px;}
+.suggestions>li{margin-top:5px; margin-bottom:5px; line-height:1.0; font-size:24px; list-style-type:none; text-transform:uppercase;}
+.hl{background:rgba(255,0,255,0.6); color:#fff;}
+.search{background-color:rgba(255,0,255,0.8); width:90%; display:block; margin:auto; border:none; height:35px; color:#fff; font-weight:700; text-transform:uppercase;}
+.hidden-box{display:none;}
+.get-out{display:block !important;}
+.side-nav{position:absolute; display:none; background:rgba(5,0,58,0.7);}
+.side-nav-activate{display:block; position:absolute; width:18%; left:0 !important; top:10%;}
+.button-box>p{color:#fff; font-size:24px; padding-left:10px;}
+.button-box>p:hover{cursor:pointer;}
+.highlight{color:rgba(255,0,255,0.8) !important;}
+#close-side{color:cyan; text-align:right; font-size:40px; padding-right:10px; font-weight:900;}
 
 /*VIDEO GAMES PAGE*/
-.game-detail {
-    height: 500px;
-    text-align: center;
-    background-image: url('Backgrounds/stainless-steel.jpg');
-    border: solid;
-    border-color: black;
-}
-
-.game-container {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.game-img {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    /*height: 100%;
-    width: 100%;*/
-    margin: auto;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-image: url('Backgrounds/stainless-steel.jpg');
-    overflow: auto;
-}
-
-game-detail:hover .overlay{
-    opacity: 1;
-}
-
-/*Filter SideNav*/
-#openCatBtn {
-    cursor: pointer;
-}
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: -30px;
-    background-color: rgba(17, 17, 17, 0.92);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    color: white;
-    text-align: right;
-}
-
-.closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
+.game-info>img{max-height:500px; display:block; margin:auto;}
+.game-info>h1{font-size:75px; color:#fff; text-align:center;}
+.game-info>h3{font-size:32px; color:#fff; text-align:center}
 
 /*Vinyl Records View*/
-.album-detail {
-    height: 500px;
-    text-align: center;
-    background-image: url('Backgrounds/stainless-steel.jpg');
-    border: solid;
-    border-color: black;
+.album-grid{display:flex !important; flex-wrap:wrap;}
+.overlay{width:25%; height:auto; overflow:hidden; color:none; position:relative;}
+.overlay:hover{background-color:rgba(0,0,0,0.6); color:#fff; position:relative; width:25%; height:auto;}
+.art-box{width:100%; height:100%; /*border:solid 3px rgba(5,0,58,0.7);*/}
+.art-box:hover{transition:0.5s ease; transform:scale(1.2);}
+#grid-btn, .side-nav-btn{font-size:36px; color:#fff; border:solid 3px #fff; width:200px; text-align:center;}
+#grid-btn:hover, .side-nav-btn{cursor:pointer}
+.grid-btn-active, .side-nav-btn-active{color:rgba(255,0,255,0.7) !important; border:solid 3px rgba(255,0,255,0.7) !important;}
+.record-info{font-size:28px; line-height:1.0 ; color:#fff; text-align:left; margin-left:10%; padding-top:2px; padding-bottom:2px; font-family: 'Share Tech Mono', monospace;}
+
+/* MOBILE DISPLAY */
+@media screen and (max-width:767px) {
+    .side-nav-activate{width:100%; background:rgba(5,0,58,0.9);}
+    .nav>li{display:inline-block;}
+    .navbar-nav{margin-top:0px !important; margin-bottom:0px;}
+    .navbar-brand{padding-bottom:15px;}
+    .side-nav-btn{display:block; margin:auto;}
+    .overlay{width:100%;}
+    .album-cover, .game-info>img{max-width:100%; height:auto; margin-top:50px !important;}
 }
 
-.album-img {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    margin: auto;
+/* TABLET DISPLAY */
+@media screen and (max-width:992px) {
+    .side-nav-activate{width:50%; background:rgba(5,0,58,0.9);}
+    h3{margin:5px; font-size:24px !important;}
 }

@@ -1,158 +1,178 @@
-﻿
+﻿@using SterlingCollection1.Models;
+@using System.Web.Script.Serialization;
+@model List<Game>
+
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    string output = new JavaScriptSerializer().Serialize(Model);
 }
 
-<div class="category-jumbo">
-    <h1>The Games of the Sterling Collection</h1>
-    <p class="lead">The Sterling Collection contains hundreds of video games, both modern and vintage, for several different gaming consoles.</p>
-    <p class="lead">Please select a gaming console from the options listed below to see which of its games belong to the Sterling Collection.</p>
-</div>
+<audio id="secret-code">
+    <source src="~/Content/Other/Zelda.mp3" type="audio/mpeg" />
+</audio>
 
-<div class="row category-detail">
-    <h2 class="category-head">Nintendo Home Consoles</h2>
-    <div class="col-md-4">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "NES"})">
-            <img class="console-frame" src="~/Content/Consoles/NintendoEntertainmentSystem.jpg" />
-        </a>
-        <p class="console-name">Nintendo Entertainment System</p>
-    </div>
-    <div class="col-md-4">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "SNES"})">
-            <img class="console-frame" src="~/Content/Consoles/SuperNintendo.jpg" />
-        </a>
-        <p class="console-name">Super Nintendo Entertainment System</p>
-</div>
-    <div class="col-md-4">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "N64"})">
-            <img class="console-frame" src="~/Content/Consoles/Nintendo64.jpg" />
-        </a>
-        <p class="console-name">Nintendo 64</p>
-    </div>
-    <div class="col-md-4">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "GameCube"})">
-            <img class="console-frame" src="~/Content/Consoles/GameCube.jpg" />
-        </a>
-        <p class="console-name">Nintendo GameCube</p>
-    </div>
-    <div class="col-md-4">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "Wii"})">
-            <img class="console-frame" src="~/Content/Consoles/NintendoWii.jpg" />
-        </a>
-        <p class="console-name">Nintendo Wii</p>
-    </div>
-    <div class="col-md-4">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "Wii U"})">
-            <img class="console-frame" src="~/Content/Consoles/WiiU.jpg" />
-        </a>
-        <p class="console-name">Nintendo Wii U</p>
+<div class="list-background">
+    <div class="container-fluid all-games">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="all-games-list">
+                        <h1>Master Game List</h1>
+                        <p class="side-nav-btn">Filter</p>
+                        @foreach(Game videogame in Model)
+                        {
+                            int gameTag = @videogame.Id;
+                            <a href="@Url.Action("VideoGames", "Game", new { gameTag = gameTag })">
+                                <h2 class="@videogame.Console game-name">@videogame.Name</h2>
+                            </a>
+                        }
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <form class="search-form">
+                        <input type="text" class="search" placeholder="Enter a Game" />
+                        <ul class="suggestions">
+                            <li>Filter for a title</li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<br />
-
-<div class="row category-detail">
-    <h2 class="category-head">Sega Consoles</h2>
-    <div class="col-md-6">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "Genesis"})">
-            <img class="console-frame" src="~/Content/Consoles/SegaGenesis.jpg" />
-        </a>
-        <p class="console-name">Sega Genesis</p>
-    </div>
-    <div class="col-md-6">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "Dreamcast"})">
-            <img class="console-frame" src="~/Content/Consoles/SegaDreamcast.jpg" />
-        </a>
-        <p class="console-name">Sega Dreamcast</p>
-    </div>
-</div>
-
-<br />
-
-<div class="row category-detail">
-    <h2 class="category-head">Sony PlayStation Consoles</h2>
-    <div class="col-md-6">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "PS1"})">
-            <img class="console-frame" src="~/Content/Consoles/PlayStation.jpg" />
-        </a>
-        <p class="console-name">PlayStation</p>
-    </div>
-    <div class="col-md-6">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "PS2"})">
-            <img class="console-frame" src="~/Content/Consoles/PlayStation2.jpg" />
-        </a>
-        <p class="console-name">PlayStation 2</p>
-    </div>
-    <div class="col-md-6">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "PS3"})">
-            <img class="console-frame" src="~/Content/Consoles/PlayStation3.jpg" />
-        </a>
-        <p class="console-name">PlayStation 3</p>
-    </div>
-    <div class="col-md-6">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "PS4"})">
-            <img class="console-frame" src="~/Content/Consoles/PlayStation4.jpg" />
-        </a>
-        <p class="console-name">PlayStation 4</p>
+<div class="side-nav">
+    <div class="button-box">
+        <p class="filter-option" id="close-side"><<<</p>
+        <p class="filter-option" id="NES">Nintendo Entertainment System</p>
+        <p class="filter-option" id="SNES">Super Nintendo</p>
+        <p class="filter-option" id="N64">Nintendo 64</p>
+        <p class="filter-option" id="GameBoy">Gameboy</p>
+        <p class="filter-option" id="GameCube">Gamecube</p>
+        <p class="filter-option" id="GBA">Gameboy Advance</p>
+        <p class="filter-option" id="DS">Nintendo DS</p>
+        <p class="filter-option" id="3DS">Nintendo 3DS</p>
+        <p class="filter-option" id="Wii">Wii</p>
+        <p class="filter-option" id="Wiiu">Wii U</p>
+        <p class="filter-option" id="PS1">Playstation</p>
+        <p class="filter-option" id="PS2">Playstation 2</p>
+        <p class="filter-option" id="PS3">Playstation 3</p>
+        <p class="filter-option" id="PS4">Playstation 4</p>
+        <p class="filter-option" id="Vita">Playstation Vita</p>
+        <p class="filter-option" id="Genesis">Sega Genesis</p>
+        <p class="filter-option" id="Dreamcast">Sega Dreamcast</p>
+        <p class="filter-option" id="Xbox">Xbox</p>
+        <p class="filter-option" id="360">Xbox 360</p>
+        <p class="filter-option" id="XBOne">Xbox One</p>
+        <p class="filter-option" id="remove-btn">Remove All Filters</p>
     </div>
 </div>
 
-<br />
+@*<script>
+    $('.side-nav-btn').click(function () {
+        $('.side-nav').toggleClass('side-nav-activate')
+    });
+    $('#NES').click(function () {
+        $('#NES').toggleClass('highlight');
+        $('.NES').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#SNES').click(function () {
+        $('#SNES').toggleClass('highlight');
+        $('.SNES').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#N64').click(function () {
+        $('#N64').toggleClass('highlight');
+        $('.N64').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#GameBoy').click(function () {
+        $('#GameBoy').toggleClass('highlight');
+        $('.GameBoy').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#Genesis').click(function () {
+        $('#Genesis').toggleClass('highlight');
+        $('.Genesis').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#PS1').click(function () {
+        $('#PS1').toggleClass('highlight');
+        $('.PS1').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#PS2').click(function () {
+        $('#PS2').toggleClass('highlight');
+        $('.PS2').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#PS3').click(function () {
+        $('#PS3').toggleClass('highlight');
+        $('.PS3').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#PS4').click(function () {
+        $('#PS4').toggleClass('highlight');
+        $('.PS4').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#GBA').click(function () {
+        $('#GBA').toggleClass('highlight');
+        $('.GBA').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#GameCube').click(function () {
+        $('#GameCube').toggleClass('highlight');
+        $('.GameCube').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#Xbox').click(function () {
+        $('#Xbox').toggleClass('highlight');
+        $('.Xbox').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#Dreamcast').click(function () {
+        $('#Dreamcast').toggleClass('highlight');
+        $('.Dreamcast').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#Wii').click(function () {
+        $('#Wii').toggleClass('highlight');
+        $('.Wii').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#DS').click(function () {
+        $('#DS').toggleClass('highlight');
+        $('.DS').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#3DS').click(function () {
+        $('#3DS').toggleClass('highlight');
+        $('.3DS').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#360').click(function () {
+        $('#360').toggleClass('highlight');
+        $('.360').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#Vita').click(function () {
+        $('#Vita').toggleClass('highlight');
+        $('.Vita').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#WiiU').click(function () {
+        $('#WiiU').toggleClass('highlight');
+        $('.WiiU').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+    $('#XBOne').click(function () {
+        $('#XBOne').toggleClass('highlight');
+        $('.XBOne').toggleClass('get-out');
+        $('.game-name').toggleClass('hidden-box');
+    });
+</script>*@
 
-<div class="row category-detail">
-    <h2 class="category-head">Microsoft Xbox Consoles</h2>
-    <div class="col-md-4">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "Xbox"})">
-            <img class="console-frame" src="~/Content/Consoles/Xbox.jpg" />
-        </a>
-        <p class="console-name">Microsoft Xbox</p>
-    </div>
-    <div class="col-md-4">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "360"})">
-            <img class="console-frame" src="~/Content/Consoles/Xbox360.jpg" />
-        </a>
-        <p class="console-name">Xbox 360</p>
-    </div>
-    <div class="col-md-4">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "XBOne"})">
-            <img class="console-frame" src="~/Content/Consoles/XboxOne.jpg" />
-        </a>
-        <p class="console-name">Xbox One</p>
-    </div>
-</div>
-
-<br />
-
-<div class="row category-detail">
-    <h2 class="category-head">Handheld Consoles</h2>
-    <div class="col-md-4">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "GameBoy"})">
-            <img class="console-frame" src="~/Content/Consoles/GameBoy.jpg" />
-        </a>
-        <p class="console-name">Nintendo GameBoy</p>
-    </div>
-    <div class="col-md-4">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "GBA"})">
-            <img class="console-frame" src="~/Content/Consoles/GameBoyAdvance.jpg" />
-        </a>
-        <p class="console-name">Nintendo GameBoy Advance</p>
-    </div>
-    <div class="col-md-4">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "DS"})">
-            <img class="console-frame" src="~/Content/Consoles/NintendoDS.jpg" />
-        </a>
-        <p class="console-name">Nintendo DS</p>
-    </div>
-    <div class="col-md-4">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "3DS"})">
-            <img class="console-frame" src="~/Content/Consoles/Nintendo3DS.jpg" />
-        </a>
-        <p class="console-name">Nintendo 3DS</p>
-    </div>
-    <div class="col-md-4">
-        <a href="@Url.Action("VideoGames", "Game", new {consoleName = "Vita"})">
-            <img class="console-frame" src="~/Content/Consoles/PlayStationVita.jpg" />
-        </a>
-        <p class="console-name">PlayStation Vita</p>
-    </div>
-</div>
+<script src="~/Scripts/GameTypeAhead.js"></script>
+<script src="~/Scripts/Konami.js"></script>

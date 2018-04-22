@@ -222,6 +222,7 @@
     <Content Include="Content\Backgrounds\heavy-metal.gif" />
     <Content Include="Content\Backgrounds\marble1.jpg" />
     <Content Include="Content\Backgrounds\MetroidFusion.gif" />
+    <Content Include="Content\Backgrounds\montage.jpg" />
     <Content Include="Content\Backgrounds\stainless-steel.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -316,6 +317,7 @@
     <Content Include="Content\Games\DeadSpace3.jpg" />
     <Content Include="Content\Games\DefJamVendetta.jpg" />
     <Content Include="Content\Games\Destiny.jpg" />
+    <Content Include="Content\Games\Destiny2.jpg" />
     <Content Include="Content\Games\DestroyAllHumans.jpg" />
     <Content Include="Content\Games\DeusEx.jpg" />
     <Content Include="Content\Games\Diablo3.jpg" />
@@ -643,7 +645,6 @@
     <Content Include="Content\Games\YoshiIsland.jpg" />
     <Content Include="Content\Games\ZeldaNES.jpg" />
     <Content Include="Content\Games\ZombiesAteMyNeighbors.jpg" />
-    <Content Include="Content\Other\DestinyVideo.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -654,6 +655,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\GameTypeAhead.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -661,6 +663,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Konami.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -682,9 +685,12 @@
     <Content Include="Views\Game\VideoGames.cshtml" />
     <Content Include="Views\Game\GameCategory.cshtml" />
     <Content Include="Views\Album\VinylRecords.cshtml" />
+    <Content Include="Scripts\games.json" />
+    <Content Include="Views\Album\Album.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Other\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

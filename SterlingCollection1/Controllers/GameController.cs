@@ -21,14 +21,17 @@ namespace SterlingCollection1.Controllers
         //GET: GameCategory
         public ActionResult GameCategory()
         {
-            return View("GameCategory");
+            List<Game> videoGames = gameDAL.GetAllGames();
+            return View("GameCategory", videoGames);
         }
 
         // GET: VideoGames
-        public ActionResult VideoGames(string consoleName)
+        public ActionResult VideoGames(int gameTag)
         {
-            List<Game> videoGames = gameDAL.GetGamesByConsole(consoleName);
-            return View("VideoGames", videoGames);
+            Game videoGame = gameDAL.GetGameInfo(gameTag);
+            return View("VideoGames", videoGame);
         }
+
+
     }
 }

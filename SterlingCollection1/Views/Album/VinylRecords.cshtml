@@ -5,27 +5,53 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="category-jumbo">
-    <h1>The Music of the Sterling Collection</h1>
-    <p class="lead">The Sterling Collection contains tons of music, including hundreds of CDs and vinyl records.</p>
-    <p class="lead">Hover over an album to view its details such as its artist, genre, year of release, and even what color vinyl it was pressed on!</p>
-</div>
 
-<div class="row album-list">
-    @foreach (Album record in Model)
-    {
-        <div class="col-md-4 album-detail">
-            <div class="album-container">
-                <img class="img-fluid album-img" src=@("../Content/Albums/" + record.AlbumArt) />
-            </div>
-            <h2>@record.AlbumName</h2>
-            <div class="overlay">
-                <p>Artist: @record.Artist</p>
-                <p>Country of Origin: @record.Country</p>
-                <p>Released in @record.ReleaseYear by @record.Label</p>
-                <p>Genre: @record.Genre</p>
-                <p>Color: @record.FormatDetail</p>
+
+<div class="list-background">
+    <div class="container-fluid all-games">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="all-games-list">
+                        <h1>Master Vinyl Album List</h1>
+                        <p id="grid-btn">Grid View</p>
+                            <div id="master-list">
+                                @foreach (Album record in Model)
+                                {
+                                    int recordTag = @record.Id;
+                                    <a href="@Url.Action("Album", "Album", new { recordTag = recordTag })">
+                                        <h2 class="record-info">@record.AlbumName - @record.Artist</h2>
+                                    </a>
+                                }
+                            </div>
+                    </div>
+                </div>
             </div>
         </div>
-    }
+    </div>
+
+    <div class="container-fluid grid-view">
+        <div class="container">
+            <div class="grid-box hidden-box">
+                @foreach(Album record in Model)
+                {
+                    int recordTag = @record.Id;
+                    <div class="overlay">
+                        <a href="@Url.Action("Album", "Album", new { recordTag = recordTag })">
+                            <img title="@record.AlbumName - @record.Artist" class="art-box" src="~/Content/Albums/@record.AlbumArt" />
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
 </div>
+
+<script>
+    $('#grid-btn').click(function () {
+        $('#grid-btn').toggleClass('grid-btn-active');
+        $('.grid-box').toggleClass('album-grid');
+        $('#master-list').toggleClass('hidden-box');
+    });
+</script>

@@ -22,5 +22,12 @@ namespace SterlingCollection1.Controllers
             List<Album> records = albumDAL.GetAllAlbums();
             return View("VinylRecords", records);
         }
+
+        // GET: Record
+        public ActionResult Album(int recordTag)
+        {
+            Album record = albumDAL.GetAlbumInfo(recordTag);
+            return View("Album", record);
+        }
     }
 }

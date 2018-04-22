@@ -12,6 +12,7 @@ namespace SterlingCollection1.DAL
         readonly string connectionString;
 
         const string SQL_GetAllAlbums = "SELECT * FROM albums ORDER BY artist, album_name;";
+        const string SQL_GetAlbumInfo = "SELECT * FROM albums WHERE id = @id";
 
         public AlbumSqlDAL(string connectionString)
         {
@@ -35,6 +36,30 @@ namespace SterlingCollection1.DAL
                     }
                     return albums;
                 }
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+        }
+
+        public Album GetAlbumInfo(int recordTag)
+        {
+            Album record = new Album();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(SQL_GetAlbumInfo, conn);
+                    cmd.Parameters.AddWithValue("@id", recordTag);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        record = PopulateAlbumObject(reader);
+                    }
+                }
+                return record;
             }
             catch (SqlException)
             {

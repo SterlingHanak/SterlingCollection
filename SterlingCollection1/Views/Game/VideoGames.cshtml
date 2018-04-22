@@ -1,11 +1,23 @@
 ﻿@using SterlingCollection1.Models;
-@model List<Game>
+@model Game
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Games</h2>
+<div class="container-fluid">
+    <div class="container">
+        <div class="game-info">
+            <img src=@("../Content/Games/" + Model.CoverArt) />
+            <h1>@Model.Name</h1>
+            <h3>@Model.Console</h3>
+            <h3>@Model.ReleaseYear</h3>
+            <h3>@Model.Publisher</h3>
+        </div>
+    </div>
+</div>
+
+@*<h2>Games</h2>
 
 <div>
     <span id="openCatBtn">Filter Options</span>
@@ -41,6 +53,13 @@
 </div>
 
 <div class="row game-list">
+    <div>
+        <h1>Game List</h1>
+    </div>
+    @foreach (Game videogame in Model)
+    {
+        <h2>@videogame.Name</h2>
+    }
     @foreach (Game videoGame in Model)
     {
         string picHeight = "100%";
@@ -67,4 +86,4 @@
             </div>
         </div>
     }
-</div>
+</div>*@

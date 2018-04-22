@@ -11,5 +11,6 @@ namespace SterlingCollection1.DAL
     {
         List<Game> GetAllGames();
         List<Game> GetGamesByConsole(string consoleName);
+        Game GetGameInfo(int gameTag);
     }
 }
