@@ -5,6 +5,7 @@
 
 $('#close-side').click(function () {
     $('.side-nav').removeClass('side-nav-activate');
+    $('.side-nav-btn').removeClass('side-nav-btn-active');
 });
 
 $('#remove-btn').click(function () {

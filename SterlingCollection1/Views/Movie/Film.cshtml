@@ -1,0 +1,25 @@
+﻿@using SterlingCollection1.Models;
+@model Movie
+
+@{
+    ViewBag.Title = "Album";
+}
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="game-info">
+                    <img class="album-cover" src=@("../Content/Movies/" + Model.CoverArt) />
+                    <h3>@Model.Name</h3>
+                    <h3>@Model.Studio</h3>
+                    <h3>@Model.Genre</h3>
+                    <h3>@Model.ReleaseYear</h3>
+                    <h3>@Model.Format</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/Movies.js"></script>

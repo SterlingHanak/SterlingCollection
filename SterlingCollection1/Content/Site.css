@@ -2,7 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     font-family: 'Share Tech Mono', monospace;
-    background-image:url(Backgrounds/dark-background.jpg); background-size:cover; background-attachment:fixed; background-repeat:no-repeat;}
+    background-image:url(Backgrounds/dark-background.jpg); background-size:cover; background-attachment:fixed; background-repeat:no-repeat;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -27,18 +27,18 @@ textarea {
 
 
 /*HOME PAGE*/
-.home-background{background-image: url('Backgrounds/Cyberpunk.jpg'); background-size:cover; background-repeat:no-repeat; background-attachment:fixed; min-height:100vh;}
-.home-main{background:rgba(25,25,112,0.6); height:50vh;}
-.home-container>h1{font-size:75px; font-weight:700; color:#fff; text-align:center;}
-.home-container>p{font-size:32px; color:#fff; text-align:center;}
+.home-background{background-image: url('Backgrounds/Cyberpunk5.jpg'); background-size:cover; background-repeat:no-repeat; background-attachment:fixed; min-height:100vh;}
+.home-main{background:rgba(75,0,130,0.7); height:50vh;}
+.home-container>h1{font-size:75px; font-weight:700; text-align:center; font-family:'Share Tech Mono', monospace; color:cyan;}
+.home-container>p{font-size:32px; color:cyan; text-align:center;}
 
 /*Game Category Page*/
 .list-background{background-image: url('Backgrounds/Cyberpunk.jpg'); background-size:cover; background-repeat:no-repeat; background-attachment:fixed; min-height:100vh;}
 .all-games-list, .search-form { background: rgba(5,0,58,0.7); /*border:solid 3px #a8a643; margin-top:20px;*/}
-.all-games-list>h1{font-size:75px; font-weight:700; color:#fff; text-align:center; color:cyan; font-family: 'Share Tech Mono', monospace;}
+.all-games-list>h1, .all-albums-list>h1{font-size:75px; font-weight:700; color:#fff; text-align:center; color:cyan; font-family: 'Share Tech Mono', monospace;}
 .all-games-list>a>h2, .suggestions>li{font-size:28px; line-height:1.0 ; color:#fff; text-align:left; margin-left:10%; padding-top:2px; padding-bottom:2px; font-family: 'Share Tech Mono', monospace;}
-.all-games-list>a:hover{text-decoration:none;}
-.all-games-list>a>h2:hover{background-color:cyan; margin-left:0; padding-left:10%; text-decoration-line:none; color:#000; padding-top:2px; padding-bottom:2px;}
+.all-games-list>a:hover, .record-anchor:hover{text-decoration:none !important;}
+.all-games-list>a>h2:hover, .record-info:hover{background-color:cyan; margin-left:0; padding-left:10%; text-decoration-line:none; color:#000; padding-top:2px; padding-bottom:2px;}
 .preview-image{display:none; float:right; max-height:350px; background:#fff}
 .search-form{margin-top:20px;}
 .suggestions>li{margin-top:5px; margin-bottom:5px; line-height:1.0; font-size:24px; list-style-type:none; text-transform:uppercase;}
@@ -59,23 +59,41 @@ textarea {
 .game-info>h3{font-size:32px; color:#fff; text-align:center}
 
 /*Vinyl Records View*/
+.record-list-background{background-image: url('Backgrounds/Cyberpunk3.jpg'); background-size:cover; background-repeat:no-repeat; background-attachment:fixed; min-height:100vh;}
 .album-grid{display:flex !important; flex-wrap:wrap;}
 .overlay{width:25%; height:auto; overflow:hidden; color:none; position:relative;}
 .overlay:hover{background-color:rgba(0,0,0,0.6); color:#fff; position:relative; width:25%; height:auto;}
 .art-box{width:100%; height:100%; /*border:solid 3px rgba(5,0,58,0.7);*/}
 .art-box:hover{transition:0.5s ease; transform:scale(1.2);}
 #grid-btn, .side-nav-btn{font-size:36px; color:#fff; border:solid 3px #fff; width:200px; text-align:center;}
+#grid-btn{margin:auto;}
 #grid-btn:hover, .side-nav-btn{cursor:pointer}
-.grid-btn-active, .side-nav-btn-active{color:rgba(255,0,255,0.7) !important; border:solid 3px rgba(255,0,255,0.7) !important;}
-.record-info{font-size:28px; line-height:1.0 ; color:#fff; text-align:left; margin-left:10%; padding-top:2px; padding-bottom:2px; font-family: 'Share Tech Mono', monospace;}
+.side-nav-btn-active{color:rgba(2,0,255,0.7) !important; border:solid 3px rgba(255,0,255,0.7) !important;}
+.grid-btn-active{color:cyan !important; border:solid 3px cyan !important;}
+.record-info{font-size:28px; line-height:1.0 ; color:cyan; text-align:left; margin-left:10%; padding-top:2px; padding-bottom:2px; font-family: 'Share Tech Mono', monospace;}
+.all-albums-list{ background: rgba(255,0,255,0.3);}
+
+/*MOVIES VIEW*/
+.movie-list-background{background-image:url('Backgrounds/Cyberpunk4.jpg'); background-size:cover; background-repeat:no-repeat; background-attachment:fixed; min-height:100vh;}
+.all-movies-list{background:rgba(50,205,50,0.7);}
+.all-movies-list>h1{font-size:75px; font-weight:700; color:#fff; text-align:center; color:cyan; font-family: 'Share Tech Mono', monospace;}
+.movie-info{font-size:28px; line-height:1.0 ; color:#fff; text-align:left; margin-left:10%; padding-top:2px; padding-bottom:2px; font-family: 'Share Tech Mono', monospace;}
+.movie-info:hover{background-color:cyan; margin-left:0; padding-left:10%; text-decoration-line:none; color:#000; padding-top:2px; padding-bottom:2px;}
+.movie-suggestions>li{margin-top:5px; margin-bottom:5px; line-height:1.0; font-size:24px; list-style-type:none; text-transform:uppercase; color:#fff; text-shadow:2px 2px #000;}
+.movie-search{background-color:cyan; width:90%; display:block; margin:auto; border:none; height:35px; color:#000; font-weight:700; text-transform:uppercase;}
+.mhl {background-color: rgba(255,0,255,0.8);}
 
 /* MOBILE DISPLAY */
 @media screen and (max-width:767px) {
+    .home-main{height:100%; margin-top:10%;}
+    .all-games{margin-top:5%;}
+    .all-movies{margin-top:5%;}
     .side-nav-activate{width:100%; background:rgba(5,0,58,0.9);}
     .nav>li{display:inline-block;}
     .navbar-nav{margin-top:0px !important; margin-bottom:0px;}
     .navbar-brand{padding-bottom:15px;}
     .side-nav-btn{display:block; margin:auto;}
+    #grid-btn{margin:auto; display:block;}
     .overlay{width:100%;}
     .album-cover, .game-info>img{max-width:100%; height:auto; margin-top:50px !important;}
 }

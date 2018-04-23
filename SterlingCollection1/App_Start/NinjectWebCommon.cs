@@ -66,6 +66,7 @@ namespace SterlingCollection1.App_Start
         {
             kernel.Bind<IGameDAL>().To<GameSqlDAL>().WithConstructorArgument("connectionString", ConfigurationManager.ConnectionStrings["SterlingCollectionDB"].ConnectionString);
             kernel.Bind<IAlbumDAL>().To<AlbumSqlDAL>().WithConstructorArgument("connectionString", ConfigurationManager.ConnectionStrings["SterlingCollectionDB"].ConnectionString);
+            kernel.Bind<IMovieDAL>().To<MovieSqlDAL>().WithConstructorArgument("connectionString", ConfigurationManager.ConnectionStrings["SterlingCollectionDB"].ConnectionString);
         }
     }
 }

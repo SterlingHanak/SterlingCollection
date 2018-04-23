@@ -7,19 +7,19 @@
 
 
 
-<div class="list-background">
+<div class="record-list-background">
     <div class="container-fluid all-games">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="all-games-list">
+                    <div class="all-albums-list">
                         <h1>Master Vinyl Album List</h1>
                         <p id="grid-btn">Grid View</p>
                             <div id="master-list">
                                 @foreach (Album record in Model)
                                 {
                                     int recordTag = @record.Id;
-                                    <a href="@Url.Action("Album", "Album", new { recordTag = recordTag })">
+                                    <a class="record-anchor" href="@Url.Action("Album", "Album", new { recordTag = recordTag })">
                                         <h2 class="record-info">@record.AlbumName - @record.Artist</h2>
                                     </a>
                                 }

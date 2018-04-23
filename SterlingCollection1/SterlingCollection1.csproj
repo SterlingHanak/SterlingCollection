@@ -157,15 +157,19 @@
     <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="DAL\AlbumSqlDAL.cs" />
     <Compile Include="DAL\GameSqlDAL.cs" />
     <Compile Include="DAL\IAlbumDAL.cs" />
     <Compile Include="DAL\IGameDAL.cs" />
+    <Compile Include="DAL\IMovieDAL.cs" />
+    <Compile Include="DAL\MovieSqlDAL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -665,6 +669,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\Konami.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Movies.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\VideoGames.js" />
@@ -687,6 +692,8 @@
     <Content Include="Views\Album\VinylRecords.cshtml" />
     <Content Include="Scripts\games.json" />
     <Content Include="Views\Album\Album.cshtml" />
+    <Content Include="Views\Movie\Movies.cshtml" />
+    <Content Include="Views\Movie\Film.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,37 @@
+﻿@using SterlingCollection1.Models;
+@model List<Movie>
+
+@{
+    ViewBag.Title = "Movies";
+}
+
+<div class="movie-list-background">
+    <div class="container-fluid all-movies">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="all-movies-list">
+                        <h1>Master Film List</h1>
+                        <div id="movie-list">
+                            <form class="movie-search-form">
+                                <input type="text" class="movie-search" placeholder="Enter a Movie" />
+                                <ul class="movie-suggestions">
+                                    <li>Filter for a title</li>
+                                </ul>
+                            </form>
+                            @*@foreach (Movie movie in Model)
+                            {
+                                int movieTag = @movie.Id;
+                                <a class="movie-anchor" href="@Url.Action("Film", "Movie", new { movieTag = movieTag })">
+                                    <h2 class="movie-info">@movie.Name</h2>
+                                </a>
+                            }*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/Movies.js"></script>
