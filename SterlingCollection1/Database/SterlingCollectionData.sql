@@ -374,6 +374,10 @@ INSERT INTO games VALUES ('Turok', '360', 'Capcom', 2008, 'Turok360.jpg');
 INSERT INTO games VALUES ('UFC 2009 Undisputed', '360', 'THQ', 2009, 'UFC2009.jpg');
 INSERT INTO games VALUES ('Unreal Tournament 3', '360', 'Epic Games', 2007, 'UnrealTournament3.jpg');
 INSERT INTO games VALUES ('The Witcher 2: Assassins of Kings Enhanced Edition', '360', 'CD Projekt RED', 2011, 'Witcher2.jpg');
+INSERT INTO games VALUES ('Clive Barker''s Jericho', '360', 'Mercury Steam', 2007, 'Jericho.jpg');
+INSERT INTO games VALUES ('Divinity II', '360', 'Larian Studios', 2009, 'Divinity2.jpg');
+INSERT INTO games VALUES ('Enchanted Arms', '360', 'FromSoftware', 2006, 'EnchantedArms.jpg');
+INSERT INTO games VALUES ('Sacred 2: Fallen Angel', '360', 'Ascaron', 2008, 'Sacred2.jpg');
 
 --NINTENDO 3DS GAMES
 INSERT INTO games VALUES ('The Legend of Zelda: A Link Between Worlds', '3DS', 'Nintendo', 2013, 'LinkBetweenWorlds.jpg');
@@ -430,6 +434,8 @@ INSERT INTO games VALUES ('Far Cry 4', 'PS4', 'Ubisoft', 2014, 'FarCry4.jpg');
 INSERT INTO games VALUES ('Dragon Age: Inquisition', 'PS4', 'Electronic Arts', 2014, 'Inquisition.jpg');
 INSERT INTO games VALUES ('Assassin''s Creed Unity', 'PS4', 'Ubisoft', 2014, 'Unity.jpg');
 INSERT INTO games VALUES ('Destiny 2', 'PS4', 'Bungie', 2017, 'Destiny2.jpg');
+INSERT INTO games VALUES ('Far Cry 5', 'PS4', 'Ubisoft', 2018, 'FarCry5.jpg');
+INSERT INTO games VALUES ('Nier: Automata', 'PS4', 'Platinum Games', 2017, 'Nier.jpg');
 
 --XBOX ONE GAMES
 INSERT INTO games VALUES ('Dishonored 2', 'XBOne', 'Bethesda Softworks', 2016, 'Dishonored2.jpg');
@@ -494,3 +500,29 @@ INSERT INTO albums VALUES ('Dangerous Days', 'Pertubator', 'France', 'Blood Musi
 INSERT INTO albums VALUES ('Hugsjá', 'Ivar Bjørnson & Einar Selvik', 'Norway', 'Norse Music', 'Scandinavian Folk', 2018, 'Vinyl', 'Blue', 'Hugsja.jpg');
 INSERT INTO albums VALUES ('For All Tid', 'Dimmu Borgir', 'Norway', 'Nuclear Blast', 'Black Metal', 1994, 'Vinyl', 'White', 'ForAllTid.jpg');
  
+
+ --MOVIES
+INSERT INTO movies VALUES ('Ghost in the Shell (Original)', 'Bandai Visual', 'Blu-Ray-Steelbook', 1995, 'Sci-fi', 'OriginalGhost.jpg');
+INSERT INTO movies VALUES ('X-Men', '20th Century Fox', 'Blu-Ray-Steelbook', 2000, 'Action', 'Xmen.jpg');
+INSERT INTO movies VALUES ('X-2: X-Men United', '20th Century Fox', 'Blu-Ray-Steelbook', 2003, 'Action', 'X2.jpg');
+INSERT INTO movies VALUES ('X-Men: Days of Future Past', '20th Century Fox', 'Blu-Ray-Steelbook', 2014, 'Action', 'FuturePast.jpg');
+INSERT INTO movies VALUES ('Hacksaw Ridge', 'Summit Entertainment', 'Blu-Ray-Steelbook', 2016, 'War Drama', 'HacksawRidge.jpg');
+INSERT INTO movies VALUES ('The Big Lebowski', 'Working Title Films', 'Blu-Ray-Steelbook', 1998, 'Comedy', 'Lebowski.jpg');
+INSERT INTO movies VALUES ('Justice League Dark', 'Warner Bros. Animation', 'Blu-Ray-Steelbook', 2017, 'Action', 'JusticeLeagueDark.jpg');
+INSERT INTO movies VALUES ('Creed', 'Warner Bros. Pictures', 'Blu-Ray-Steelbook', 2015, 'Drama', 'Creed.jpg');
+INSERT INTO movies VALUES ('Fast and Furious 6', 'Universal Pictures', 'Blu-Ray-Steelbook', 2013, 'Action', 'FF6.jpg');
+INSERT INTO movies VALUES ('Riddick', 'Universal Pictures', 'Blu-Ray-Steelbook', 2013, 'Sci-fi', 'Riddick.jpg');
+INSERT INTO movies VALUES ('Pitch Black', 'USA Films', 'Blu-Ray-Steelbook', 2000, 'Sci-fi', 'PitchBlack.jpg');
+INSERT INTO movies VALUES ('Steve Austin 4 Movie Collection', 'Anchor Bay', 'Blu-Ray-Steelbook', 2014, 'Action', 'SteveAustin.jpg');
+INSERT INTO movies VALUES ('Straight Outta Compton', 'Universal Pictures', 'Blu-Ray-Steelbook', 2015, 'Biopic', 'Compton.jpg');
+INSERT INTO movies VALUES ('Sausage Party', 'Columbia Pictures', 'Blu-Ray-Steelbook', 2016, 'Comedy', 'SausageParty.jpg');
+INSERT INTO movies VALUES ('Finding Dory', 'Walt Disney Studios', 'Blu-Ray-Steelbook', 2016, 'Animated', 'Dory.jpg');
+INSERT INTO movies VALUES ('Ted 2', 'Universal Pictures', 'Blu-Ray-Steelbook', 2015, 'Comedy', 'Ted2.jpg');
+INSERT INTO movies VALUES ('Chappie', 'Columbia Pictures', 'Blu-Ray-Steelbook', 2015, 'Sci-fi', 'Chappie.jpg');
+INSERT INTO movies VALUES ('Terminator Genisys', 'Paramount Pictures', 'Blu-Ray-Steelbook', 2015, 'Sci-fi', 'Genisys.jpg');
+INSERT INTO movies VALUES ('Southpaw', 'The Weinstein Company', 'Blu-Ray-Steelbook', 2015, 'Drama', 'Southpaw.jpg');
+INSERT INTO movies VALUES ('The Lords of Salem', 'Anchor Bay', 'Blu-Ray-Steelbook', 2012, 'Horror', 'Salem.jpg');
+INSERT INTO movies VALUES ('Fury', 'Columbia Pictures', 'Blu-Ray-Steelbook', 2014, 'War Drama', 'Fury.jpg');
+INSERT INTO movies VALUES ('22 Jump Street', 'Columbia Pictures', 'Blu-Ray-Steelbook', 2014, 'Comedy', '22JumpStreet.jpg');
+INSERT INTO movies VALUES ('Lucy', 'Universal Pictures', 'Blu-Ray-Steelbook', 2014, 'Sci-fi', 'Lucy.jpg');
+INSERT INTO movies VALUES ('Django Unchained', 'The Weinstein Company', 'Blu-Ray-Steelbook', 2012, 'Western', 'Django.jpg');

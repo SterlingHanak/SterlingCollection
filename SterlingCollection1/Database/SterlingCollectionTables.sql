@@ -26,10 +26,10 @@ CREATE TABLE albums (
 CREATE TABLE movies (
 	id integer IDENTITY NOT NULL,
 	title varchar(100) NOT NULL,
-	starring varchar(max) NOT NULL,
+	studio varchar(max) NOT NULL,
 	movie_format varchar(100) NOT NULL,
 	release_year integer NOT NULL,
-	format_detail varchar(100) NULL,
+	genre varchar(100) NULL,
 	img_name varchar(100) NOT NULL
 	CONSTRAINT pk_movies_id PRIMARY KEY(id),
 );

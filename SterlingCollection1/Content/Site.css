@@ -28,7 +28,7 @@ textarea {
 
 /*HOME PAGE*/
 .home-background{background-image: url('Backgrounds/Cyberpunk5.jpg'); background-size:cover; background-repeat:no-repeat; background-attachment:fixed; min-height:100vh;}
-.home-main{background:rgba(75,0,130,0.7); height:50vh;}
+.home-main{background:rgba(0,0,0,0.7); height:50vh;}
 .home-container>h1{font-size:75px; font-weight:700; text-align:center; font-family:'Share Tech Mono', monospace; color:cyan;}
 .home-container>p{font-size:32px; color:cyan; text-align:center;}
 
